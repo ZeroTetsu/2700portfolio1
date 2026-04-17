@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Anthony Apelado — Home</title>
+  <meta name="description" content="Anthony Apelado — IT student portfolio" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page-home">
+  <header class="nav" role="banner">
+    <a class="brand" href="index.html">Anthony Apelado</a>
+    <nav role="navigation" aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container" role="main">
+    <section class="hero hero--split" aria-labelledby="home-title">
+      <div class="hero__media" aria-hidden="true">
+        <img src="assets/images/ME.jpg" alt="Portrait of Anthony Apelado" class="hero__photo" loading="lazy" width="600" height="600">
+      </div>
+
+      <div class="hero__content">
+        <h1 id="home-title" class="hero__title">Anthony Jenrick G. Apelado</h1>
+        <p class="hero__subtitle">IT Professional focused on networking, database management, and secure web solutions, creating websites and implementing backend software for companies and organizations.</p>
+
+        <ul class="hero__badges" aria-hidden="true">
+          <li>Networking</li>
+          <li>Database Management</li>
+          <li>Web Development</li>
+        </ul>
+
+        <p class="hero__note">Available for internships and freelance work.</p>
+      </div>
+    </section>
+
+    <section class="cards-section">
+      <div class="cards">
+        <a class="card" href="projects.html">Featured Projects</a>
+        <a class="card" href="resume.html">Live Resume</a>
+        <a class="card" href="contact.html">Contact Me</a>
+      </div>
+    </section>
+  </main>
+
+  <button class="hook" id="hookBtn" aria-label="Open contact form">Contact</button>
+
+  <div class="hook-modal" id="hookModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="hookTitle">
+    <div class="hook-panel" role="document">
+      <button class="hook-close" id="hookClose" aria-label="Close contact form">✕</button>
+      <h2 id="hookTitle">Quick Contact</h2>
+
+      <form id="hookForm" method="POST" action="/api/contact" class="hook-form">
+        <label for="hook-name">Name</label>
+        <input id="hook-name" name="name" type="text" required>
+
+        <label for="hook-email">Email</label>
+        <input id="hook-email" name="email" type="email" required>
+
+        <label for="hook-message">Message</label>
+        <textarea id="hook-message" name="message" rows="5" required></textarea>
+
+        <div class="hook-actions">
+          <button type="submit" class="btn btn--primary">Send</button>
+          <button type="button" class="btn btn--ghost" id="hookCancel">Cancel</button>
+        </div>
+
+        <p id="hookStatus" class="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <strong>Anthony Jenrick G. Apelado</strong>
+        <div class="footer-sub">IT Professional • Networking • Databases • Web</div>
+      </div>
+        </nav>
+        <div class="footer-copy">© 2026 Anthony Apelado</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

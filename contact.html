@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Anthony Apelado</title>
+  <meta name="description" content="Get in touch with Anthony Apelado." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="page-contact">
+
+  <header class="nav" role="banner">
+    <a class="brand" href="index.html">Anthony Apelado</a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container" role="main">
+
+    <section class="hero">
+      <div class="hero__content">
+        <h1 class="hero__title">Contact Me</h1>
+        <p class="hero__subtitle">
+          Have a question, opportunity, or project in mind?
+          Send a message and I’ll respond as soon as possible.
+        </p>    
+      </div>
+    </section>
+
+    <section class="project-card contact-section">
+      <h2>Send a Message</h2>
+
+      <!-- IMPORTANT: action points to /contact (Cloudflare Worker route) -->
+      <form id="contactForm" method="POST" action="/contact">
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required placeholder="Your full name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="email">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            required
+            placeholder="Tell me about your project, question, or inquiry..."
+          ></textarea>
+        </div>
+
+        <div class="hook-actions">
+          <button type="submit" class="btn btn--primary">Send Message</button>
+          <span id="status" class="status" aria-live="polite"></span>
+        </div>
+
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <strong>Anthony Jenrick G. Apelado</strong>
+        <div class="footer-sub">IT Professional • Networking • Databases • Web</div>
+      </div>
+      <div class="footer-right">
+        <div class="footer-copy">© 2026 Anthony Apelado</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
